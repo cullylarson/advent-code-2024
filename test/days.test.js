@@ -19,7 +19,7 @@ const parts = {
   },
   "day 2, part 2": {
     part: "day-02/part-2.js",
-    answer: "",
+    answer: "531",
   },
 };
 
