@@ -29,6 +29,10 @@ const parts = {
     part: "day-03/part-2.js",
     answer: "74361272",
   },
+  "day 4, part 1": {
+    part: "day-04/part-1.js",
+    answer: "2562",
+  },
 };
 
 const run = async (scriptPath) => {
@@ -62,5 +66,5 @@ cases(
 
     expect(result).toBe(answer);
   },
-  parts,
+  parts
 );
