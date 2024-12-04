@@ -8,7 +8,7 @@ export const readInput = (filename) =>
 function findStatementString(startIndex, chars, statementString) {
   const charsForStatement = chars.slice(
     startIndex,
-    startIndex + statementString.length,
+    startIndex + statementString.length
   );
 
   if (charsForStatement.join("") === statementString) {
@@ -46,18 +46,18 @@ function findNumber(startIndex, chars) {
 }
 
 function findComma(startIndex, chars) {
-  if (chars[startIndex] === ",") {
-    return { index: startIndex + 1, statement: "," };
-  } else {
-    return undefined;
+  const doResult = findStatementString(startIndex, chars, ",");
+
+  if (doResult) {
+    return { index: doResult.index, statement: { type: "," } };
   }
 }
 
 function findClosingParen(startIndex, chars) {
-  if (chars[startIndex] === ")") {
-    return { index: startIndex + 1, statement: ")" };
-  } else {
-    return undefined;
+  const doResult = findStatementString(startIndex, chars, ")");
+
+  if (doResult) {
+    return { index: doResult.index, statement: { type: ")" } };
   }
 }
 
