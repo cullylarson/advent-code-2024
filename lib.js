@@ -23,6 +23,11 @@ export const min = (xs) => Math.min(...xs);
 
 export const sum = (xs) => xs.reduce(add, 0);
 
+export const not =
+  (f) =>
+  (...args) =>
+    !f(...args);
+
 export const mult = (xs) => xs.reduce((a, b) => a * b, 1);
 
 export const length = (xs) => xs.length;
